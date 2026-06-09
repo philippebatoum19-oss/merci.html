@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Confirmation Michel Arthur">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Confirmation de Michel Arthur – 28 Juin 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+      color: #f0e6c8;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: #111111;
+      max-width: 640px;
+      width: 100%;
+      border: 0.5px solid #c9a84c;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      border-bottom: 0.5px solid #2a2418;
+      background: linear-gradient(180deg, #1a1508 0%, #111111 100%);
+    }
+
+    .cross {
+      font-size: 28px;
+      color: #c9a84c;
+      margin-bottom: 1rem;
+      letter-spacing: 4px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #8a7a52;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 500;
+      color: #c9a84c;
+      line-height: 1.05;
+      margin-bottom: 0.4rem;
+    }
+
+    .family-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #8a7a52;
+    }
+
+    /* DIVIDER */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1.5rem 2rem;
+    }
+    .divider-line { flex: 1; height: 0.5px; background: #2a2418; }
+    .divider-ornament {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: #c9a84c;
+      line-height: 1;
+    }
+
+    /* VERSE */
+    .verse {
+      padding: 0 2.5rem 2rem;
+      text-align: center;
+    }
+    .verse-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-style: italic;
+      color: #d4c49a;
+      line-height: 1.8;
+    }
+    .verse-ref {
+      margin-top: 0.75rem;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #6a5e3a;
+    }
+
+    /* COUNTDOWN */
+    .countdown-section {
+      background: #0d0d0d;
+      padding: 2rem;
+      text-align: center;
+      border-top: 0.5px solid #2a2418;
+      border-bottom: 0.5px solid #2a2418;
+    }
+
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8a7a52;
+      margin-bottom: 1.25rem;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .cd-item { display: flex; flex-direction: column; align-items: center; min-width: 64px; }
+
+    .cd-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 500;
+      color: #c9a84c;
+      line-height: 1;
+    }
+
+    .cd-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6a5e3a;
+      margin-top: 5px;
+    }
+
+    .cd-sep {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      color: #3a3020;
+      margin-top: 2px;
+      line-height: 1;
+    }
+
+    /* INFO */
+    .info-section {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-card {
+      border: 0.5px solid #2a2418;
+      border-radius: 12px;
+      padding: 1.25rem;
+      background: #0d0d0d;
+    }
+
+    .info-card.full { grid-column: 1 / -1; }
+
+    .info-icon {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #c9a84c;
+    }
+
+    .info-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6a5e3a;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: #f0e6c8;
+      line-height: 1.4;
+    }
+
+    .info-sub {
+      font-size: 12px;
+      color: #8a7a52;
+      margin-top: 3px;
+    }
+
+    /* RSVP */
+    .rsvp-section {
+      padding: 0 2rem 2rem;
+    }
+
+    .rsvp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0.25rem;
+      color: #c9a84c;
+    }
+
+    .rsvp-sub {
+      font-size: 12px;
+      color: #8a7a52;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .rsvp-form {
+      background: #0d0d0d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 0.5px solid #2a2418;
+    }
+
+    .form-group { margin-bottom: 1rem; }
+
+    .form-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8a7a52;
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 0.5px solid #2a2418;
+      border-radius: 8px;
+      background: #111111;
+      color: #f0e6c8;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input::placeholder { color: #4a4030; }
+    .form-input:focus { border-color: #c9a84c; }
+
+    .presence-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .presence-btn {
+      padding: 11px 10px;
+      border: 0.5px solid #2a2418;
+      border-radius: 8px;
+      background: #111111;
+      color: #8a7a52;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .presence-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+    .presence-btn.yes-active { border-color: #c9a84c; background: #1a1508; color: #c9a84c; }
+    .presence-btn.no-active  { border-color: #6a3020; background: #1a0d08; color: #c07050; }
+
+    .submit-btn {
+      width: 100%;
+      padding: 13px;
+      background: #c9a84c;
+      color: #0a0a0a;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: opacity 0.2s;
+    }
+
+    .submit-btn:hover { opacity: 0.85; }
+
+    .success-msg {
+      display: none;
+      padding: 1.5rem;
+      background: #1a1508;
+      border-radius: 10px;
+      border: 0.5px solid #c9a84c;
+    }
+
+    .success-msg p { color: #c9a84c; font-size: 14px; line-height: 1.7; text-align: center; }
+
+    /* CONTACT */
+    .contact-section {
+      padding: 1.5rem 2rem;
+      border-top: 0.5px solid #2a2418;
+      text-align: center;
+    }
+
+    .contact-nums {
+      font-size: 15px;
+      font-weight: 500;
+      color: #f0e6c8;
+      letter-spacing: 0.5px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #0d0d0d;
+      padding: 1.25rem 2rem;
+      border-top: 0.5px solid #2a2418;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 11px;
+      color: #6a5e3a;
+      letter-spacing: 1.5px;
+    }
+
+    /* Touch targets minimum 44px */
+    .presence-btn { min-height: 48px; }
+    .submit-btn { min-height: 52px; }
+    .form-input { min-height: 48px; font-size: 16px; }
+    .contact-nums a { color: #f0e6c8; text-decoration: none; }
+
+    /* RESPONSIVE mobile */
+    @media (max-width: 520px) {
+      body { padding: 0; }
+      .card { border-radius: 0; border-left: none; border-right: none; }
+      h1 { font-size: 36px; }
+      .cd-num { font-size: 34px; }
+      .cd-item { min-width: 52px; }
+      .countdown-grid { gap: 0.4rem; }
+      .cd-sep { font-size: 32px; }
+      .info-section { grid-template-columns: 1fr; padding: 1.25rem; }
+      .info-card.full { grid-column: 1; }
+      .verse { padding: 0 1.25rem 1.75rem; }
+      .verse-text { font-size: 15px; }
+      .hero { padding: 2.5rem 1.25rem 1.75rem; }
+      .rsvp-section { padding: 0 1.25rem 1.75rem; }
+      .rsvp-form { padding: 1.25rem; }
+      .presence-btns { grid-template-columns: 1fr; }
+      .presence-btn { min-height: 52px; }
+      .divider { padding: 1.25rem; }
+      .contact-section { padding: 1.25rem; }
+      .eyebrow { letter-spacing: 2px; font-size: 9px; }
+    }
+
+    @media (max-width: 360px) {
+      h1 { font-size: 28px; }
+      .cd-num { font-size: 26px; }
+      .cd-sep { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="cross">✝</div>
+    <p class="eyebrow">Vous êtes cordialement invités à la confirmation de</p>
+    <h1>Michel Arthur</h1>
+    <p class="family-name">Famille BATOUM</p>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-ornament">❧</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- VERSE -->
+  <div class="verse">
+    <p class="verse-text">
+      « Sur lui reposera l'Esprit de l'Éternel : Esprit de sagesse et d'intelligence,<br>
+      Esprit de conseil et de force, Esprit de connaissance et de crainte de l'Éternel »
+    </p>
+    <p class="verse-ref">Isaïe 11, 2</p>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-section">
+    <p class="section-eyebrow">Compte à rebours</p>
+    <div class="countdown-grid">
+      <div class="cd-item">
+        <span class="cd-num" id="cd-days">--</span>
+        <span class="cd-label">Jours</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="cd-item">
+        <span class="cd-num" id="cd-hours">--</span>
+        <span class="cd-label">Heures</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="cd-item">
+        <span class="cd-num" id="cd-mins">--</span>
+        <span class="cd-label">Minutes</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="cd-item">
+        <span class="cd-num" id="cd-secs">--</span>
+        <span class="cd-label">Secondes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOS -->
+  <div class="info-section">
+    <div class="info-card">
+      <div class="info-icon">📅</div>
+      <p class="info-label">Date</p>
+      <p class="info-value">28 Juin 2026</p>
+      <p class="info-sub">à 14h00</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">⛪</div>
+      <p class="info-label">Cérémonie</p>
+      <p class="info-value">Église St-Pierre</p>
+      <p class="info-sub">Garoua</p>
+    </div>
+    <div class="info-card full">
+      <div class="info-icon">🏡</div>
+      <p class="info-label">Réception</p>
+      <p class="info-value">Domicile familial</p>
+      <p class="info-sub">Quartier Marouaré · après la messe</p>
+    </div>
+  </div>
+
+  <!-- RSVP -->
+  <div class="rsvp-section">
+    <h2 class="rsvp-title">Confirmez votre présence</h2>
+    <p class="rsvp-sub">Merci de nous faire part de votre réponse</p>
+
+    <div class="rsvp-form" id="rsvp-form">
+      <div class="form-group">
+        <label class="form-label" for="guest-name">Votre nom complet</label>
+        <input class="form-input" type="text" id="guest-name" placeholder="Prénom et nom">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="guest-count">Nombre de personnes</label>
+        <input class="form-input" type="number" id="guest-count" placeholder="1" min="1" max="30">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Serez-vous présent(e) ?</label>
+        <div class="presence-btns">
+          <button class="presence-btn" id="btn-yes" onclick="selectPresence('yes')">✓ &nbsp;Oui, avec joie</button>
+          <button class="presence-btn" id="btn-no"  onclick="selectPresence('no')">✕ &nbsp;Je ne pourrai pas</button>
+        </div>
+      </div>
+      <button class="submit-btn" onclick="submitRSVP()">Envoyer ma réponse</button>
+    </div>
+
+    <div class="success-msg" id="success-msg">
+      <p id="success-text"></p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-section">
+    <p class="section-eyebrow">Contact & renseignements</p>
+    <p class="contact-nums">📞 &nbsp;<a href="tel:+237695322325">695 322 325</a> &nbsp;/&nbsp; <a href="tel:+237698424184">698 424 184</a></p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Avec tout notre amour · Famille BATOUM</p>
+  </div>
+
+</div>
+
+<script>
+  let presence = null;
+
+  function selectPresence(val) {
+    presence = val;
+    document.getElementById('btn-yes').className = 'presence-btn' + (val === 'yes' ? ' yes-active' : '');
+    document.getElementById('btn-no').className  = 'presence-btn' + (val === 'no'  ? ' no-active'  : '');
+  }
+
+  async function submitRSVP() {
+    const name  = document.getElementById('guest-name').value.trim();
+    const count = document.getElementById('guest-count').value;
+    if (!name)    { alert('Merci de renseigner votre nom.'); return; }
+    if (!presence){ alert("Merci d'indiquer si vous serez présent(e)."); return; }
+
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch('https://formspree.io/f/mwvjpgrk', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nom: name,
+          personnes: count || '1',
+          presence: presence === 'yes' ? 'Oui, présent(e)' : 'Non, absent(e)'
+        })
+      });
+
+      const msg = document.getElementById('success-msg');
+      const txt = document.getElementById('success-text');
+      document.getElementById('rsvp-form').style.display = 'none';
+
+      if (response.ok) {
+        if (presence === 'yes') {
+          txt.innerHTML = '🙏 Merci <strong>' + name + '</strong> !<br>Votre présence a bien été confirmée'
+            + (count ? ' pour <strong>' + count + ' personne(s)</strong>' : '')
+            + '.<br><br>Nous vous attendons avec joie le <strong>28 juin 2026</strong><br>à l\'église St-Pierre de Garoua.';
+        } else {
+          txt.innerHTML = 'Merci <strong>' + name + '</strong> pour votre réponse.<br>Vous nous manquerez. Nous vous souhaitons une belle journée.';
+        }
+      } else {
+        txt.innerHTML = "Une erreur s'est produite. Veuillez contacter directement le 695 322 325.";
+      }
+
+      msg.style.display = 'block';
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    } catch(e) {
+      alert("Erreur réseau. Veuillez réessayer ou contacter le 695 322 325.");
+      btn.textContent = 'Envoyer ma réponse';
+      btn.disabled = false;
+    }
+  }
+
+  function updateCountdown() {
+    const target = new Date('2026-06-28T14:00:00');
+    const diff   = target - new Date();
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000)  / 60000);
+    const s = Math.floor((diff % 60000)    / 1000);
+    document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
